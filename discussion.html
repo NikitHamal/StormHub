@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to optimize React components for better performance? - DevConnect</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/explore.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation will be included here -->
+    
+    <main>
+        <section class="discussion-detail">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="material-icons-outlined">chevron_right</span>
+                    <a href="categories.html">Categories</a>
+                    <span class="material-icons-outlined">chevron_right</span>
+                    <a href="category.html?id=frontend">Frontend Development</a>
+                    <span class="material-icons-outlined">chevron_right</span>
+                    <span class="current-page">How to optimize React components...</span>
+                </div>
+                
+                <!-- Discussion Header -->
+                <div class="discussion-header">
+                    <div class="discussion-votes column">
+                        <button class="vote-btn" aria-label="Upvote">
+                            <span class="material-icons-outlined">arrow_upward</span>
+                        </button>
+                        <span class="vote-count">24</span>
+                        <button class="vote-btn" aria-label="Downvote">
+                            <span class="material-icons-outlined">arrow_downward</span>
+                        </button>
+                    </div>
+                    
+                    <div class="discussion-main">
+                        <h1 class="discussion-title">How to optimize React components for better performance?</h1>
+                        
+                        <div class="post-meta">
+                            <div class="author-info">
+                                <a href="profile.html?id=jane" class="author-avatar"></a>
+                                <div class="author-details">
+                                    <a href="profile.html?id=jane" class="author-name">Jane Smith</a>
+                                    <div class="post-date">Posted 2 days ago · Edited 1 day ago</div>
+                                </div>
+                            </div>
+                            
+                            <div class="post-tags">
+                                <a href="#" class="tag">React</a>
+                                <a href="#" class="tag">Performance</a>
+                                <a href="#" class="tag">JavaScript</a>
+                            </div>
+                        </div>
+                        
+                        <div class="post-content">
+                            <p>I'm working on a large-scale React application and noticing some performance issues when rendering complex components. I've tried using React.memo for some components, but I'm still seeing lag during updates.</p>
+                            
+                            <p>Here's a simplified example of one of my problematic components:</p>
+                            
+                            <pre><code class="language-jsx">
+const ComplexList = ({ items }) => {
+    return (
+        <div className="list-container">
+            {items.map(item => (
+                <ListItem 
+                    key={item.id}
+                    title={item.title}
+                    description={item.description}
+                    image={item.image}
+                    metadata={item.metadata}
+                    onAction={() => handleAction(item.id)}
+                />
+            ))}
+        </div>
+    );
+};
+                            </code></pre>
+                            
+                            <p>When the list updates frequently, the UI becomes sluggish. I've tried:</p>
+                            
+                            <ul>
+                                <li>Wrapping the ListItem in React.memo</li>
+                                <li>Using useCallback for the onAction handler</li>
+                                <li>Moving some state to Redux for better control</li>
+                            </ul>
+                            
+                            <p>What other strategies should I try to optimize render performance? Are there specific React patterns that work well for large lists with frequent updates?</p>
+                        </div>
+                        
+                        <div class="post-actions">
+                            <button class="btn-text">
+                                <span class="material-icons-outlined">bookmark_border</span>
+                                Bookmark
+                            </button>
+                            <button class="btn-text">
+                                <span class="material-icons-outlined">share</span>
+                                Share
+                            </button>
+                            <button class="btn-text">
+                                <span class="material-icons-outlined">flag</span>
+                                Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Answers/Replies Section -->
+                <div class="answers-section">
+                    <div class="answers-header">
+                        <h2>3 Answers</h2>
+                        <div class="answers-sort">
+                            <label for="answer-sort">Sort by:</label>
+                            <select id="answer-sort" class="sort-select">
+                                <option value="votes">Highest Votes</option>
+                                <option value="recent">Most Recent</option>
+                                <option value="oldest">Oldest</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Answer item with accepted mark -->
+                    <div class="answer-item accepted">
+                        <div class="accepted-mark">
+                            <span class="material-icons-outlined">check_circle</span>
+                            <span class="accepted-text">Accepted Answer</span>
+                        </div>
+                        
+                        <div class="answer-votes column">
+                            <button class="vote-btn" aria-label="Upvote">
+                                <span class="material-icons-outlined">arrow_upward</span>
+                            </button>
+                            <span class="vote-count">18</span>
+                            <button class="vote-btn" aria-label="Downvote">
+                                <span class="material-icons-outlined">arrow_downward</span>
+                            </button>
+                        </div>
+                        
+                        <div class="answer-main">
+                            <div class="post-meta">
+                                <div class="author-info">
+                                    <a href="profile.html?id=alex" class="author-avatar"></a>
+                                    <div class="author-details">
+                                        <a href="profile.html?id=alex" class="author-name">Alex Johnson</a>
+                                        <div class="post-date">Posted 1 day ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="post-content">
+                                <p>There are several strategies you can use to optimize React components, especially for large lists:</p>
+                                
+                                <h4>1. Virtualize your list</h4>
+                                <p>For long lists, virtualization is one of the most effective strategies. Libraries like <code>react-window</code> or <code>react-virtualized</code> only render items that are currently visible in the viewport.</p>
+                                
+                                <pre><code class="language-jsx">
+import { FixedSizeList } from 'react-window';
+
+const VirtualizedList = ({ items }) => {
+    const Row = ({ index, style }) => (
+        <div style={style}>
+            <ListItem 
+                title={items[index].title}
+                description={items[index].description}
+                // other props
+            />
+        </div>
+    );
+    
+    return (
+        <FixedSizeList
+            height={400}
+            width="100%"
+            itemCount={items.length}
+            itemSize={80}
+        >
+            {Row}
+        </FixedSizeList>
+    );
+};
+                                </code></pre>
+                                
+                                <h4>2. Avoid anonymous functions in renders</h4>
+                                <p>Creating new function instances on every render can prevent memo from working correctly:</p>
+                                
+                                <pre><code class="language-jsx">
+// Instead of this:
+&lt;ListItem onAction={() => handleAction(item.id)} /&gt;
+
+// Do this:
+const handleItemAction = useCallback(
+    (id) => handleAction(id),
+    [handleAction]
+);
+
+// Then in render:
+&lt;ListItem onAction={handleItemAction} itemId={item.id} /&gt;
+                                </code></pre>
+                                
+                                <h4>3. Use a stable key strategy</h4>
+                                <p>Ensure you're using stable, unique keys for list items that don't change between renders.</p>
+                                
+                                <h4>4. Consider using Web Workers</h4>
+                                <p>For complex computations, you might want to offload work to a Web Worker.</p>
+                                
+                                <p>I'd recommend starting with virtualization since it will give you the biggest performance boost for long lists with minimal code changes.</p>
+                            </div>
+                            
+                            <div class="post-actions">
+                                <button class="btn-text">
+                                    <span class="material-icons-outlined">bookmark_border</span>
+                                    Bookmark
+                                </button>
+                                <button class="btn-text">
+                                    <span class="material-icons-outlined">share</span>
+                                    Share
+                                </button>
+                                <button class="btn-text">
+                                    <span class="material-icons-outlined">flag</span>
+                                    Report
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- More answer items would go here -->
+                    
+                    <!-- Answer Form -->
+                    <div class="answer-form">
+                        <h3>Your Answer</h3>
+                        <div class="input-container">
+                            <textarea class="input-field" rows="6" placeholder="Write your answer here..."></textarea>
+                        </div>
+                        <div class="formatting-tools">
+                            <button class="format-btn" aria-label="Bold">
+                                <span class="material-icons-outlined">format_bold</span>
+                            </button>
+                            <button class="format-btn" aria-label="Italic">
+                                <span class="material-icons-outlined">format_italic</span>
+                            </button>
+                            <button class="format-btn" aria-label="Link">
+                                <span class="material-icons-outlined">link</span>
+                            </button>
+                            <button class="format-btn" aria-label="Code">
+                                <span class="material-icons-outlined">code</span>
+                            </button>
+                            <button class="format-btn" aria-label="Image">
+                                <span class="material-icons-outlined">image</span>
+                            </button>
+                        </div>
+                        <button class="btn-primary">Post Your Answer</button>
+                    </div>
+                </div>
+                
+                <!-- Related Questions -->
+                <div class="related-questions">
+                    <h3>Related Questions</h3>
+                    <ul class="related-list">
+                        <li class="related-item">
+                            <a href="discussion.html?id=124">How to implement lazy loading in React?</a>
+                            <div class="related-meta">
+                                <span>16 answers</span>
+                                <span>•</span>
+                                <span>342 views</span>
+                            </div>
+                        </li>
+                        <li class="related-item">
+                            <a href="discussion.html?id=125">Using React.memo effectively in functional components</a>
+                            <div class="related-meta">
+                                <span>8 answers</span>
+                                <span>•</span>
+                                <span>217 views</span>
+                            </div>
+                        </li>
+                        <li class="related-item">
+                            <a href="discussion.html?id=126">Should you use Redux for all state in React?</a>
+                            <div class="related-meta">
+                                <span>24 answers</span>
+                                <span>•</span>
+                                <span>512 views</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer will be included here -->
+    
+    <script src="js/main.js"></script>
+    <script src="js/highlight.js"></script>
+    <script>
+        // Initialize code highlighting
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+        });
+    </script>
+</body>
+</html> 
