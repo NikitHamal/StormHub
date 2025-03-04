@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - StormHub Community</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/explore.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <div class="stars-container">
+        <div class="stars"></div>
+        <div class="stars"></div>
+        <div class="stars"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>StormHub</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="explore.html" class="nav-link active">Explore</a>
+                <a href="#" class="nav-link">About</a>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Toggle theme">
+                    <span class="material-icons-outlined light-icon">light_mode</span>
+                    <span class="material-icons-outlined dark-icon">dark_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="explore-hero">
+            <div class="container">
+                <h1>Explore Discussions & Creative Works</h1>
+                <p class="lead">Discover trending topics, join conversations, and find inspiration from our community of writers and creative minds.</p>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <span class="material-icons-outlined">search</span>
+                        <input type="text" placeholder="Search discussions, topics, or authors...">
+                    </div>
+                    <button class="btn btn-primary">Search</button>
+                </div>
+                
+                <div class="trending-tags">
+                    <span class="tag-label">Trending Tags:</span>
+                    <a href="#" class="tag">#Poetry</a>
+                    <a href="#" class="tag">#ShortStory</a>
+                    <a href="#" class="tag">#CreativeWriting</a>
+                    <a href="#" class="tag">#Feedback</a>
+                    <a href="#" class="tag">#WeeklyPrompt</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="explore-categories">
+            <div class="container">
+                <h2 class="section-title">Browse by Category</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <span class="material-icons-outlined">auto_stories</span>
+                        </div>
+                        <h3>Fiction</h3>
+                        <p>Short stories, novel excerpts, and flash fiction from emerging and established writers.</p>
+                        <a href="#" class="category-link">Browse Fiction <span class="material-icons-outlined">arrow_forward</span></a>
+                    </div>
+                    
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <span class="material-icons-outlined">format_quote</span>
+                        </div>
+                        <h3>Poetry</h3>
+                        <p>Verses that capture emotions, experiences, and observations in rhythmic expression.</p>
+                        <a href="#" class="category-link">Browse Poetry <span class="material-icons-outlined">arrow_forward</span></a>
+                    </div>
+                    
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <span class="material-icons-outlined">psychology</span>
+                        </div>
+                        <h3>Creative Nonfiction</h3>
+                        <p>Personal essays, memoirs, and reflective pieces that explore real-life experiences.</p>
+                        <a href="#" class="category-link">Browse Nonfiction <span class="material-icons-outlined">arrow_forward</span></a>
+                    </div>
+                    
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <span class="material-icons-outlined">lightbulb</span>
+                        </div>
+                        <h3>Writing Prompts</h3>
+                        <p>Catalysts for creativity with weekly challenges and inspiration for writers.</p>
+                        <a href="#" class="category-link">Browse Prompts <span class="material-icons-outlined">arrow_forward</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-discussions" id="featured-discussions">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Discussions</h2>
+                    <a href="#" class="view-all">View All <span class="material-icons-outlined">chevron_right</span></a>
+                </div>
+                
+                <div class="discussion-list">
+                    <div class="discussion-card">
+                        <div class="discussion-meta">
+                            <div class="author-info">
+                                <div class="author-avatar"></div>
+                                <div class="author-details">
+                                    <p class="author-name">Elena Wright</p>
+                                    <p class="post-time">2 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="discussion-stats">
+                                <span><span class="material-icons-outlined">comment</span> 24</span>
+                                <span><span class="material-icons-outlined">favorite_border</span> 42</span>
+                            </div>
+                        </div>
+                        <div class="discussion-content">
+                            <h3 class="discussion-title">The Impact of Rhythm in Modern Poetry: Breaking Conventions</h3>
+                            <p class="discussion-excerpt">I've been exploring how contemporary poets are challenging traditional rhythmic patterns. What are your thoughts on how this affects the...</p>
+                            <div class="discussion-tags">
+                                <a href="#" class="tag">#Poetry</a>
+                                <a href="#" class="tag">#Technique</a>
+                                <a href="#" class="tag">#ModernStyle</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="discussion-card">
+                        <div class="discussion-meta">
+                            <div class="author-info">
+                                <div class="author-avatar"></div>
+                                <div class="author-details">
+                                    <p class="author-name">Marcus Chen</p>
+                                    <p class="post-time">Yesterday</p>
+                                </div>
+                            </div>
+                            <div class="discussion-stats">
+                                <span><span class="material-icons-outlined">comment</span> 18</span>
+                                <span><span class="material-icons-outlined">favorite_border</span> 35</span>
+                            </div>
+                        </div>
+                        <div class="discussion-content">
+                            <h3 class="discussion-title">Character Development: Building Complexity in Short Fiction</h3>
+                            <p class="discussion-excerpt">With limited word count, developing nuanced characters in short stories can be challenging. I'd love to hear what techniques...</p>
+                            <div class="discussion-tags">
+                                <a href="#" class="tag">#ShortStory</a>
+                                <a href="#" class="tag">#Characters</a>
+                                <a href="#" class="tag">#WritingTips</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="discussion-card">
+                        <div class="discussion-meta">
+                            <div class="author-info">
+                                <div class="author-avatar"></div>
+                                <div class="author-details">
+                                    <p class="author-name">Sophia Rodriguez</p>
+                                    <p class="post-time">3 days ago</p>
+                                </div>
+                            </div>
+                            <div class="discussion-stats">
+                                <span><span class="material-icons-outlined">comment</span> 37</span>
+                                <span><span class="material-icons-outlined">favorite_border</span> 68</span>
+                            </div>
+                        </div>
+                        <div class="discussion-content">
+                            <h3 class="discussion-title">Weekly Writing Prompt: "A Letter Never Sent"</h3>
+                            <p class="discussion-excerpt">This week's challenge invites you to craft a piece around correspondence that never reached its intended recipient. Share your...</p>
+                            <div class="discussion-tags">
+                                <a href="#" class="tag">#WeeklyPrompt</a>
+                                <a href="#" class="tag">#Writing</a>
+                                <a href="#" class="tag">#Challenge</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="community-showcase" id="community-showcase">
+            <div class="container">
+                <h2 class="section-title">Community Showcase</h2>
+                <p class="section-subtitle">Highlighting exceptional works from our community members</p>
+                
+                <div class="showcase-grid">
+                    <div class="showcase-card">
+                        <div class="showcase-content">
+                            <span class="material-icons-outlined showcase-icon">format_quote</span>
+                            <div class="showcase-text">
+                                <p>"The city breathes in syncopated rhythms, exhaling stories through concrete veins and glass eyes that reflect fragments of ourselves..."</p>
+                            </div>
+                            <div class="showcase-meta">
+                                <p class="showcase-title">Urban Echoes</p>
+                                <p class="showcase-author">by Jamie Winters</p>
+                            </div>
+                        </div>
+                        <div class="showcase-actions">
+                            <button class="btn-text"><span class="material-icons-outlined">favorite_border</span> 127</button>
+                            <button class="btn-text"><span class="material-icons-outlined">bookmark_border</span> Save</button>
+                            <button class="btn-text"><span class="material-icons-outlined">share</span> Share</button>
+                        </div>
+                    </div>
+                    
+                    <div class="showcase-card">
+                        <div class="showcase-content">
+                            <span class="material-icons-outlined showcase-icon">auto_stories</span>
+                            <div class="showcase-text">
+                                <p>"The old man watched as the child collected seashells, each one a universe of possibility. In her hands, even the broken ones found purpose..."</p>
+                            </div>
+                            <div class="showcase-meta">
+                                <p class="showcase-title">Tides of Memory</p>
+                                <p class="showcase-author">by Rahim Patel</p>
+                            </div>
+                        </div>
+                        <div class="showcase-actions">
+                            <button class="btn-text"><span class="material-icons-outlined">favorite_border</span> 94</button>
+                            <button class="btn-text"><span class="material-icons-outlined">bookmark_border</span> Save</button>
+                            <button class="btn-text"><span class="material-icons-outlined">share</span> Share</button>
+                        </div>
+                    </div>
+                    
+                    <div class="showcase-card">
+                        <div class="showcase-content">
+                            <span class="material-icons-outlined showcase-icon">psychology</span>
+                            <div class="showcase-text">
+                                <p>"Grief arrives uninvited, sits at your table, and rearranges the furniture. Eventually, you learn to live in the new layout of your heart..."</p>
+                            </div>
+                            <div class="showcase-meta">
+                                <p class="showcase-title">The Geography of Loss</p>
+                                <p class="showcase-author">by Olivia Thompson</p>
+                            </div>
+                        </div>
+                        <div class="showcase-actions">
+                            <button class="btn-text"><span class="material-icons-outlined">favorite_border</span> 156</button>
+                            <button class="btn-text"><span class="material-icons-outlined">bookmark_border</span> Save</button>
+                            <button class="btn-text"><span class="material-icons-outlined">share</span> Share</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="showcase-cta">
+                    <button class="btn btn-primary">Submit Your Work</button>
+                    <button class="btn btn-secondary">Browse More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="active-members" id="active-members">
+            <div class="container">
+                <h2 class="section-title">Active Community Members</h2>
+                <div class="members-grid">
+                    <div class="member-card">
+                        <div class="member-avatar"></div>
+                        <h3 class="member-name">Elijah Brooks</h3>
+                        <p class="member-role">Fiction Writer</p>
+                        <div class="member-stats">
+                            <span><span class="material-icons-outlined">description</span> 34 Posts</span>
+                            <span><span class="material-icons-outlined">group</span> 245 Followers</span>
+                        </div>
+                        <button class="btn btn-secondary btn-small">Follow</button>
+                    </div>
+                    
+                    <div class="member-card">
+                        <div class="member-avatar"></div>
+                        <h3 class="member-name">Naomi Chen</h3>
+                        <p class="member-role">Poet & Essayist</p>
+                        <div class="member-stats">
+                            <span><span class="material-icons-outlined">description</span> 52 Posts</span>
+                            <span><span class="material-icons-outlined">group</span> 378 Followers</span>
+                        </div>
+                        <button class="btn btn-secondary btn-small">Follow</button>
+                    </div>
+                    
+                    <div class="member-card">
+                        <div class="member-avatar"></div>
+                        <h3 class="member-name">Thomas Kim</h3>
+                        <p class="member-role">Literary Critic</p>
+                        <div class="member-stats">
+                            <span><span class="material-icons-outlined">description</span> 47 Posts</span>
+                            <span><span class="material-icons-outlined">group</span> 312 Followers</span>
+                        </div>
+                        <button class="btn btn-secondary btn-small">Follow</button>
+                    </div>
+                    
+                    <div class="member-card">
+                        <div class="member-avatar"></div>
+                        <h3 class="member-name">Maya Johnson</h3>
+                        <p class="member-role">Novelist</p>
+                        <div class="member-stats">
+                            <span><span class="material-icons-outlined">description</span> 28 Posts</span>
+                            <span><span class="material-icons-outlined">group</span> 196 Followers</span>
+                        </div>
+                        <button class="btn btn-secondary btn-small">Follow</button>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <button class="btn btn-primary">View All Members</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="join-community">
+            <div class="container">
+                <div class="join-content">
+                    <h2>Ready to join the conversation?</h2>
+                    <p>Connect with writers and readers who share your passion for the written word. Register now to participate in discussions, share your work, and receive feedback from the community.</p>
+                    <div class="join-buttons">
+                        <button class="btn btn-primary">Register now</button>
+                        <button class="btn btn-secondary">Learn more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>StormHub</h2>
+                <p>Where words create worlds</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h3>Explore</h3>
+                    <a href="explore.html">Categories</a>
+                    <a href="explore.html#community-showcase">Featured Works</a>
+                    <a href="explore.html#featured-discussions">Discussions</a>
+                </div>
+                <div class="link-group">
+                    <h3>Community</h3>
+                    <a href="#">Guidelines</a>
+                    <a href="explore.html#active-members">Members</a>
+                    <a href="#">Events</a>
+                </div>
+                <div class="link-group">
+                    <h3>Support</h3>
+                    <a href="#">Help Center</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Feedback</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 StormHub. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Twitter"><span class="material-icons-outlined">language</span></a>
+                <a href="#" aria-label="Instagram"><span class="material-icons-outlined">photo_camera</span></a>
+                <a href="#" aria-label="LinkedIn"><span class="material-icons-outlined">group</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
