@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - StormHub</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/explore.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <div class="stars-container">
+        <div class="stars"></div>
+        <div class="stars"></div>
+        <div class="stars"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>StormHub</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="explore.html" class="nav-link">Explore</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="write.html" class="nav-link">Write</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Toggle theme">
+                    <span class="material-icons-outlined light-icon">light_mode</span>
+                    <span class="material-icons-outlined dark-icon">dark_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="explore-hero">
+            <div class="container">
+                <h1>Help Center</h1>
+                <p class="lead">Find answers to common questions and learn how to make the most of StormHub.</p>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <span class="material-icons-outlined">search</span>
+                        <input type="text" placeholder="Search for help topics...">
+                    </div>
+                    <button class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="help-content">
+            <div class="container">
+                <div class="help-grid">
+                    <div class="help-sidebar">
+                        <h3>Help Topics</h3>
+                        <ul class="help-topics">
+                            <li class="active"><a href="#getting-started">Getting Started</a></li>
+                            <li><a href="#account-settings">Account & Settings</a></li>
+                            <li><a href="#writing-publishing">Writing & Publishing</a></li>
+                            <li><a href="#reading-engaging">Reading & Engaging</a></li>
+                            <li><a href="#community">Community</a></li>
+                            <li><a href="#troubleshooting">Troubleshooting</a></li>
+                            <li><a href="#privacy-security">Privacy & Security</a></li>
+                        </ul>
+
+                        <div class="help-contact">
+                            <h3>Need More Help?</h3>
+                            <p>Our support team is here for you.</p>
+                            <a href="#contact" class="btn btn-secondary">Contact Support</a>
+                        </div>
+                    </div>
+
+                    <div class="help-main">
+                        <div class="help-section active" id="getting-started">
+                            <h2>Getting Started with StormHub</h2>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h3>What is StormHub?</h3>
+                                    <span class="material-icons-outlined">expand_more</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>StormHub is a community platform for writers, poets, and creative minds to share their work, connect with others, and grow their craft. Our platform offers tools for writing, publishing, and engaging with a supportive community of fellow creators.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h3>How do I create an account?</h3>
+                                    <span class="material-icons-outlined">expand_more</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>To create an account:</p>
+                                    <ol>
+                                        <li>Click the "Register now" button on the homepage</li>
+                                        <li>Enter your email address and create a password</li>
+                                        <li>Choose a username</li>
+                                        <li>Verify your email address</li>
+                                        <li>Complete your profile with a bio and profile picture (optional)</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h3>Is StormHub free to use?</h3>
+                                    <span class="material-icons-outlined">expand_more</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Yes! StormHub offers a free membership with access to all core features. We also offer a premium membership with additional benefits like advanced writing tools, increased storage, and featured placement opportunities.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h3>How do I navigate the platform?</h3>
+                                    <span class="material-icons-outlined">expand_more</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>StormHub has several main sections:</p>
+                                    <ul>
+                                        <li><strong>Home:</strong> Your personalized feed and platform updates</li>
+                                        <li><strong>Explore:</strong> Discover new content, writers, and communities</li>
+                                        <li><strong>Write:</strong> Create and publish your work</li>
+                                        <li><strong>Profile:</strong> Manage your account and view your published works</li>
+                                    </ul>
+                                    <p>The navigation menu at the top of the page allows you to access these sections easily.</p>
+                                </div>
+                            </div>
+
+                            <div class="help-video">
+                                <h3>Quick Start Video Guide</h3>
+                                <div class="video-container">
+                                    <div class="video-placeholder">
+                                        <span class="material-icons-outlined">play_circle</span>
+                                        <p>StormHub Orientation: Getting Started</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="help-section" id="account-settings">
+                            <!-- Account & Settings content would go here -->
+                            <p class="placeholder-text">Account & Settings help content will be available soon.</p>
+                        </div>
+
+                        <div class="help-section" id="writing-publishing">
+                            <!-- Writing & Publishing content would go here -->
+                            <p class="placeholder-text">Writing & Publishing help content will be available soon.</p>
+                        </div>
+
+                        <div class="help-section" id="reading-engaging">
+                            <!-- Reading & Engaging content would go here -->
+                            <p class="placeholder-text">Reading & Engaging help content will be available soon.</p>
+                        </div>
+
+                        <div class="help-section" id="community">
+                            <!-- Community content would go here -->
+                            <p class="placeholder-text">Community help content will be available soon.</p>
+                        </div>
+
+                        <div class="help-section" id="troubleshooting">
+                            <!-- Troubleshooting content would go here -->
+                            <p class="placeholder-text">Troubleshooting help content will be available soon.</p>
+                        </div>
+
+                        <div class="help-section" id="privacy-security">
+                            <!-- Privacy & Security content would go here -->
+                            <p class="placeholder-text">Privacy & Security help content will be available soon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Support</h2>
+                <p>Can't find what you're looking for? Our support team is here to help.</p>
+                
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="input-label">Name</label>
+                        <div class="input-container">
+                            <input type="text" id="name" class="input-field" placeholder="Your name">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="input-label">Email</label>
+                        <div class="input-container">
+                            <input type="email" id="email" class="input-field" placeholder="Your email address">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="input-label">Subject</label>
+                        <div class="input-container">
+                            <select id="subject" class="input-field">
+                                <option value="">Select a subject</option>
+                                <option value="account">Account Issues</option>
+                                <option value="technical">Technical Problems</option>
+                                <option value="billing">Billing Questions</option>
+                                <option value="feedback">Feedback & Suggestions</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="input-label">Message</label>
+                        <div class="input-container">
+                            <textarea id="message" class="input-field" rows="5" placeholder="Describe your issue or question in detail"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </div>
+                
+                <div class="contact-alternatives">
+                    <h3>Other Ways to Reach Us</h3>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <span class="material-icons-outlined">email</span>
+                            <h4>Email</h4>
+                            <p>support@stormhub.com</p>
+                        </div>
+                        <div class="contact-method">
+                            <span class="material-icons-outlined">schedule</span>
+                            <h4>Response Time</h4>
+                            <p>Within 24-48 hours</p>
+                        </div>
+                        <div class="contact-method">
+                            <span class="material-icons-outlined">forum</span>
+                            <h4>Community Forum</h4>
+                            <p><a href="#">Visit the Forum</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>StormHub</h2>
+                <p>Where words create worlds</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h3>Explore</h3>
+                    <a href="explore.html">Categories</a>
+                    <a href="explore.html#community-showcase">Featured Works</a>
+                    <a href="explore.html#featured-discussions">Discussions</a>
+                </div>
+                <div class="link-group">
+                    <h3>Community</h3>
+                    <a href="guidelines.html">Guidelines</a>
+                    <a href="explore.html#active-members">Members</a>
+                    <a href="#">Events</a>
+                </div>
+                <div class="link-group">
+                    <h3>Support</h3>
+                    <a href="help.html">Help Center</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#">Feedback</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 StormHub. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Twitter"><span class="material-icons-outlined">language</span></a>
+                <a href="#" aria-label="Instagram"><span class="material-icons-outlined">photo_camera</span></a>
+                <a href="#" aria-label="LinkedIn"><span class="material-icons-outlined">group</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

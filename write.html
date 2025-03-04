@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write - StormHub Community</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/explore.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <div class="stars-container">
+        <div class="stars"></div>
+        <div class="stars"></div>
+        <div class="stars"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>StormHub</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="explore.html" class="nav-link">Explore</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="write.html" class="nav-link active">Write</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Toggle theme">
+                    <span class="material-icons-outlined light-icon">light_mode</span>
+                    <span class="material-icons-outlined dark-icon">dark_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="write-header">
+            <div class="container">
+                <h1>Create Your Work</h1>
+                <p class="lead">Express yourself through poetry, stories, or essays. Share your unique voice with the StormHub community.</p>
+            </div>
+        </section>
+
+        <section class="write-content">
+            <div class="container">
+                <div class="write-form">
+                    <div class="form-group">
+                        <label for="title" class="input-label">Title</label>
+                        <div class="input-container">
+                            <input type="text" id="title" class="input-field" placeholder="Enter the title of your work">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="content-type" class="input-label">Content Type</label>
+                        <div class="input-container">
+                            <select id="content-type" class="input-field">
+                                <option value="">Select content type</option>
+                                <option value="poetry">Poetry</option>
+                                <option value="short-story">Short Story</option>
+                                <option value="essay">Essay</option>
+                                <option value="flash-fiction">Flash Fiction</option>
+                                <option value="memoir">Memoir</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="content" class="input-label">Content</label>
+                        <div class="editor-toolbar">
+                            <button type="button" class="toolbar-btn" title="Bold">
+                                <span class="material-icons-outlined">format_bold</span>
+                            </button>
+                            <button type="button" class="toolbar-btn" title="Italic">
+                                <span class="material-icons-outlined">format_italic</span>
+                            </button>
+                            <button type="button" class="toolbar-btn" title="Underline">
+                                <span class="material-icons-outlined">format_underlined</span>
+                            </button>
+                            <button type="button" class="toolbar-btn" title="Heading">
+                                <span class="material-icons-outlined">title</span>
+                            </button>
+                            <button type="button" class="toolbar-btn" title="Quote">
+                                <span class="material-icons-outlined">format_quote</span>
+                            </button>
+                            <button type="button" class="toolbar-btn" title="List">
+                                <span class="material-icons-outlined">format_list_bulleted</span>
+                            </button>
+                            <button type="button" class="toolbar-btn" title="Link">
+                                <span class="material-icons-outlined">link</span>
+                            </button>
+                            <button type="button" class="toolbar-btn" title="Image">
+                                <span class="material-icons-outlined">image</span>
+                            </button>
+                        </div>
+                        <div class="input-container">
+                            <textarea id="content" class="input-field content-editor" rows="15" placeholder="Start writing your masterpiece here..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tags" class="input-label">Tags <span class="optional">(optional)</span></label>
+                        <div class="input-container">
+                            <input type="text" id="tags" class="input-field" placeholder="Add tags separated by commas (e.g., poetry, nature, love)">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="input-label">Cover Image <span class="optional">(optional)</span></label>
+                        <div class="cover-upload">
+                            <div class="upload-area">
+                                <span class="material-icons-outlined">cloud_upload</span>
+                                <p>Drag and drop an image or click to browse</p>
+                                <input type="file" id="cover-image" class="file-input" accept="image/*">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="input-label">Publishing Options</label>
+                        <div class="publishing-options">
+                            <div class="option">
+                                <input type="radio" id="publish-public" name="publish-option" value="public" checked>
+                                <label for="publish-public">
+                                    <span class="material-icons-outlined">public</span>
+                                    <div>
+                                        <h4>Public</h4>
+                                        <p>Anyone can view and interact with your work</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="publish-limited" name="publish-option" value="limited">
+                                <label for="publish-limited">
+                                    <span class="material-icons-outlined">group</span>
+                                    <div>
+                                        <h4>Limited</h4>
+                                        <p>Only StormHub members can view and interact</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="publish-private" name="publish-option" value="private">
+                                <label for="publish-private">
+                                    <span class="material-icons-outlined">lock</span>
+                                    <div>
+                                        <h4>Private</h4>
+                                        <p>Only you can view this work</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary">Save Draft</button>
+                        <button type="button" class="btn btn-primary">Publish</button>
+                    </div>
+                </div>
+
+                <div class="write-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Writing Tips</h3>
+                        <ul class="tips-list">
+                            <li>
+                                <span class="material-icons-outlined">lightbulb</span>
+                                <p>Start with a compelling opening that hooks your reader.</p>
+                            </li>
+                            <li>
+                                <span class="material-icons-outlined">lightbulb</span>
+                                <p>Use vivid imagery and sensory details to bring your writing to life.</p>
+                            </li>
+                            <li>
+                                <span class="material-icons-outlined">lightbulb</span>
+                                <p>Edit ruthlessly - remove anything that doesn't serve your piece.</p>
+                            </li>
+                            <li>
+                                <span class="material-icons-outlined">lightbulb</span>
+                                <p>Consider your rhythm and pacing, especially for poetry.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Daily Prompt</h3>
+                        <div class="prompt-card">
+                            <p>"Write about a moment when time seemed to stand still."</p>
+                            <button class="btn btn-text">Try this prompt</button>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Your Drafts</h3>
+                        <div class="drafts-list">
+                            <div class="draft-item">
+                                <div class="draft-info">
+                                    <h4>Untitled Draft</h4>
+                                    <p>Last edited: 2 hours ago</p>
+                                </div>
+                                <button class="btn-icon">
+                                    <span class="material-icons-outlined">edit</span>
+                                </button>
+                            </div>
+                            <div class="draft-item">
+                                <div class="draft-info">
+                                    <h4>Memories of Summer</h4>
+                                    <p>Last edited: Yesterday</p>
+                                </div>
+                                <button class="btn-icon">
+                                    <span class="material-icons-outlined">edit</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>StormHub</h2>
+                <p>Where words create worlds</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h3>Explore</h3>
+                    <a href="explore.html">Categories</a>
+                    <a href="explore.html#community-showcase">Featured Works</a>
+                    <a href="explore.html#featured-discussions">Discussions</a>
+                </div>
+                <div class="link-group">
+                    <h3>Community</h3>
+                    <a href="guidelines.html">Guidelines</a>
+                    <a href="explore.html#active-members">Members</a>
+                    <a href="#">Events</a>
+                </div>
+                <div class="link-group">
+                    <h3>Support</h3>
+                    <a href="help.html">Help Center</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#">Feedback</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 StormHub. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Twitter"><span class="material-icons-outlined">language</span></a>
+                <a href="#" aria-label="Instagram"><span class="material-icons-outlined">photo_camera</span></a>
+                <a href="#" aria-label="LinkedIn"><span class="material-icons-outlined">group</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - StormHub Community</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/explore.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <div class="stars-container">
+        <div class="stars"></div>
+        <div class="stars"></div>
+        <div class="stars"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>StormHub</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="explore.html" class="nav-link">Explore</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="write.html" class="nav-link">Write</a>
+                <a href="profile.html" class="nav-link active">Profile</a>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Toggle theme">
+                    <span class="material-icons-outlined light-icon">light_mode</span>
+                    <span class="material-icons-outlined dark-icon">dark_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile-header">
+            <div class="container">
+                <div class="profile-cover"></div>
+                <div class="profile-info">
+                    <div class="profile-avatar"></div>
+                    <div class="profile-details">
+                        <h1>Sarah Johnson</h1>
+                        <p class="profile-tagline">Poet | Short Story Writer | Literary Enthusiast</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-value">42</span>
+                                <span class="stat-label">Works</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">156</span>
+                                <span class="stat-label">Followers</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">89</span>
+                                <span class="stat-label">Following</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn btn-primary">
+                            <span class="material-icons-outlined">edit</span>
+                            Edit Profile
+                        </button>
+                        <button class="btn btn-secondary">
+                            <span class="material-icons-outlined">settings</span>
+                            Settings
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-content">
+            <div class="container">
+                <div class="profile-tabs">
+                    <button class="tab-btn active" data-tab="works">My Works</button>
+                    <button class="tab-btn" data-tab="discussions">Discussions</button>
+                    <button class="tab-btn" data-tab="bookmarks">Bookmarks</button>
+                    <button class="tab-btn" data-tab="about">About Me</button>
+                </div>
+
+                <div class="tab-content active" id="works-tab">
+                    <div class="works-grid">
+                        <div class="work-card">
+                            <div class="work-header">
+                                <h3>Whispers of the Storm</h3>
+                                <span class="work-type">Poetry Collection</span>
+                            </div>
+                            <p class="work-excerpt">A collection of poems exploring the turbulent emotions that come with change and transformation...</p>
+                            <div class="work-meta">
+                                <span class="work-date">Published: May 15, 2023</span>
+                                <div class="work-stats">
+                                    <span><span class="material-icons-outlined">visibility</span> 342</span>
+                                    <span><span class="material-icons-outlined">favorite</span> 78</span>
+                                    <span><span class="material-icons-outlined">comment</span> 24</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-card">
+                            <div class="work-header">
+                                <h3>The Silent Observer</h3>
+                                <span class="work-type">Short Story</span>
+                            </div>
+                            <p class="work-excerpt">In a world where everyone is constantly watched, one observer begins to question the system...</p>
+                            <div class="work-meta">
+                                <span class="work-date">Published: April 3, 2023</span>
+                                <div class="work-stats">
+                                    <span><span class="material-icons-outlined">visibility</span> 215</span>
+                                    <span><span class="material-icons-outlined">favorite</span> 42</span>
+                                    <span><span class="material-icons-outlined">comment</span> 18</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-card">
+                            <div class="work-header">
+                                <h3>Midnight Reflections</h3>
+                                <span class="work-type">Poetry</span>
+                            </div>
+                            <p class="work-excerpt">A series of introspective poems written during the quiet hours when the world sleeps...</p>
+                            <div class="work-meta">
+                                <span class="work-date">Published: March 21, 2023</span>
+                                <div class="work-stats">
+                                    <span><span class="material-icons-outlined">visibility</span> 189</span>
+                                    <span><span class="material-icons-outlined">favorite</span> 56</span>
+                                    <span><span class="material-icons-outlined">comment</span> 12</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="load-more">
+                        <button class="btn btn-text">Load More <span class="material-icons-outlined">expand_more</span></button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="discussions-tab">
+                    <div class="discussions-list">
+                        <p class="empty-state">Your discussions will appear here.</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="bookmarks-tab">
+                    <div class="bookmarks-grid">
+                        <p class="empty-state">Your bookmarked works will appear here.</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="about-tab">
+                    <div class="about-me">
+                        <h2>About Me</h2>
+                        <p>Writer and poet based in Portland, Oregon. I draw inspiration from nature, urban landscapes, and the complex tapestry of human emotions. My work explores themes of identity, connection, and the search for meaning in our increasingly digital world.</p>
+                        
+                        <h3>Writing Journey</h3>
+                        <p>I've been writing since I was twelve, starting with simple journal entries that evolved into poetry and short stories. I studied Creative Writing at Portland State University and have been published in several literary magazines including The Willamette Review and Northwest Passages.</p>
+                        
+                        <h3>Influences</h3>
+                        <p>Mary Oliver, Ocean Vuong, Sylvia Plath, and Raymond Carver have all shaped my writing style and perspective.</p>
+                        
+                        <h3>Contact</h3>
+                        <p>Feel free to reach out for collaborations or just to connect:</p>
+                        <div class="contact-links">
+                            <a href="#" class="contact-link"><span class="material-icons-outlined">email</span> Email</a>
+                            <a href="#" class="contact-link"><span class="material-icons-outlined">language</span> Website</a>
+                            <a href="#" class="contact-link"><span class="material-icons-outlined">photo_camera</span> Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>StormHub</h2>
+                <p>Where words create worlds</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h3>Explore</h3>
+                    <a href="explore.html">Categories</a>
+                    <a href="explore.html#community-showcase">Featured Works</a>
+                    <a href="explore.html#featured-discussions">Discussions</a>
+                </div>
+                <div class="link-group">
+                    <h3>Community</h3>
+                    <a href="guidelines.html">Guidelines</a>
+                    <a href="explore.html#active-members">Members</a>
+                    <a href="#">Events</a>
+                </div>
+                <div class="link-group">
+                    <h3>Support</h3>
+                    <a href="help.html">Help Center</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#">Feedback</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 StormHub. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Twitter"><span class="material-icons-outlined">language</span></a>
+                <a href="#" aria-label="Instagram"><span class="material-icons-outlined">photo_camera</span></a>
+                <a href="#" aria-label="LinkedIn"><span class="material-icons-outlined">group</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
